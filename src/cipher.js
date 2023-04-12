@@ -1,47 +1,51 @@
 const cipher = {
-  codingChar: function (char, offset) {	
-    if (char.charCodeAt(char) >=32 && char.charCodeAt(char) <=64) {
-      return char
-    } if (char === "?") {
-      return "?"
-    } if (char === "¿") {
-      return "¿"
-    } if (char === "¡") {
-      return "¡"  
-    } else {
-      var coded_ascii = (char.charCodeAt(char) + offset - 65) % 26 + 65
-      var coded_char = String.fromCharCode(coded_ascii)
-      return coded_char
-    }
-  },
-  encode: function (msg, offset) {
+  encode: function (txt, offset) {
     var coded_msg = ""
-    for (var i=0; i<msg.length; i++){
-      coded_msg = coded_msg + codingChar(msg[i], offset)
+    for (var i=0; i<txt.length; i++){
+      var char = txt[i]
+      var char_ascii = char.charCodeAt(char)
+      var coded_char = (char_ascii + offset - 65) % 26 + 65 
+      if (char_ascii >=32 && char_ascii <=64) {
+        return char
+      } if (char_ascii >=65 && char_ascii <=90) {
+        return String.fromCharCode(coded_char) 
+      } if (char_ascii >=97 && char_ascii <=122) {
+          var min_char = ((char_ascii - 32) + offset - 65) % 26 + 65
+          return String.fromCharCode(min_char)
+      } if (char === "?") {
+              return "?"
+      } if (char === "¿") {
+              return "¿"
+      } if (char === "¡") {
+              return "¡"  
+      } else {
+                return ""
+      }
     }
-    return coded_msg
   },
-  decodingChar: function (char, offset) {	
-    if (char.charCodeAt(char) >=32 && char.charCodeAt(char) <=64) {
+decode: function (txt, offset) {
+  var coded_msg = ""
+  for (var i=0; i<txt.length; i++){
+    var char = txt[i]
+    var char_ascii = char.charCodeAt(char)
+    var coded_char = (char_ascii - offset - 65) % 26 + 65 
+    if (char_ascii >=32 && char_ascii <=64) {
       return char
+    } if (char_ascii >=65 && char_ascii <=90) {
+      return String.fromCharCode(coded_char) 
+    } if (char_ascii >=97 && char_ascii <=122) {
+        var min_char = ((char_ascii - 32) - offset - 65) % 26 + 65
+        return String.fromCharCode(min_char)
     } if (char === "?") {
-      return "?"
+            return "?"
     } if (char === "¿") {
-      return "¿"
+            return "¿"
     } if (char === "¡") {
-      return "¡"  
+            return "¡"  
     } else {
-      var coded_ascii = (char.charCodeAt(char) - offset - 65) % 26 + 65
-      var coded_char = String.fromCharCode(coded_ascii)
-      return coded_char
+              return ""
     }
-  },
-  decode: function (msg, offset) {
-    var coded_msg = ""
-    for (var i=0; i<msg.length; i++){
-      coded_msg = coded_msg + decodingChar(msg[i], offset)
-    }
-    return coded_msg
-  },
-};
+  return coded_msg}
+}
+}
 export default cipher;
