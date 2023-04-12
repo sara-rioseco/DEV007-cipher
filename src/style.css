@@ -6,7 +6,7 @@ html {
     display: inline;
 }
     body {
-        background-image: url(fondo1x1.jpg);
+        background-image: url(img/fondo1x1.jpg);
         background-position: center;
         background-size: 30%;
     } 
