@@ -1,11 +1,12 @@
 import cipher from './cipher.js';
-    var button = document.getElementById("bttn");
-    var msg = document.getElementById("inputtext").value;
-    var ofst = document.getElementById("inputoffset").value;
-    var encoded = cipher.encode(ofst, msg);
-    var decoded = cipher.decode(ofst, msg);
-        button.addEventListener('click', (event) => {
+    const cdform = document.getElementById("codeform");
+    const button = document.getElementById("bttn");
+        button.addEventListener('click'), (event) => {
+            const msg = document.getElementById("inputtext").value;
+            const ofst = document.getElementById("inputoffset").value;
+            const encoded = cipher.encode(ofst, msg);
+            const decoded = cipher.decode(ofst, msg);
             event.preventDefault();
             console.log(encoded);
             console.log(decoded);
-        })
+        }

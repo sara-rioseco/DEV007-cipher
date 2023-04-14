@@ -7,13 +7,13 @@
   </head>
   <body>
     <div id="root" class="center">
-      <img src="img/logo.jpg" alt="Logo Top Secret" width="300" height="300">
-      <h1>Bienvenid@ a Top Secret</h1>
       <main>
+        <img src="img/logo.jpg" alt="Logo Top Secret" width="300" height="300">
+        <h1>Bienvenid@ a Top Secret</h1>
         <h2>Aquí podrás crear un mensaje codificado para tener una conversación secreta con tus amig@s.</h2>
-        <form id="codeform">
+        <form id="codeform" autocomplete="off">
           <p>Tu mensaje:</p>
-          <input type="text" id="inputtext" size="30" required minlength="1" placeholder="Ingresa aquí el mensaje a codificar"><br>
+          <input type="text" id="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" placeholder="Ingresa aquí el mensaje a codificar"><br>
           <p>Ingresa el número de desplazamiento:</p>
           <input type="number" id="inputoffset" min="0"><br><br>
           <input type="submit" id="bttn" value="Codificar"/>
