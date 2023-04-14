@@ -1,5 +1,5 @@
 const cipher = {
-  encode: function (txt, offset) {
+  encode: function (offset, txt) {
     var coded_msg = ""
     for (var i=0; i<txt.length; i++){
       var char = txt[i]
@@ -23,7 +23,7 @@ const cipher = {
       }
     } return coded_msg
   },
-decode: function (txt, offset) {
+decode: function (offset, txt) {
   var decoded_msg = ""
   for (var i=0; i<txt.length; i++){
     var char = txt[i]
