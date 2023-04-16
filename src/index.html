@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Top Secret</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat|DynaPuff">
   </head>
   <body>
     <div id="root" class="center">
@@ -13,10 +14,10 @@
         <h2>Aquí podrás crear un mensaje codificado para tener una conversación secreta con tus amig@s.</h2>
         <form id="codeform" autocomplete="off">
           <p>Tu mensaje:</p>
-          <input type="text" id="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" placeholder="Ingresa aquí el mensaje a codificar"><br>
+          <input type="text" id="inputtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" placeholder="Ingresa aquí el mensaje a codificar"><br>
           <p>Ingresa el número de desplazamiento:</p>
-          <input type="number" id="inputoffset" min="0"><br><br>
-          <input type="submit" id="bttn" value="Codificar"/>
+          <input type="number" id="inputoffset" class="inputoffset" min="0"><br><br><br>
+          <input type="submit" id="bttn" class="bttn" value="Codificar"/>
         </form>
       </main>
     </div>
