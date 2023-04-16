@@ -11,13 +11,19 @@
       <main>
         <img src="img/logo.jpg" alt="Logo Top Secret" width="300" height="300">
         <h1>Bienvenid@ a Top Secret</h1>
-        <h2>Aquí podrás crear un mensaje codificado para tener una conversación secreta con tus amig@s.</h2>
+        <h2>Aquí podrás codificar o decodificar un mensaje para tener una conversación secreta con tus amig@s.</h2>
         <form id="codeform" autocomplete="off">
-          <p>Tu mensaje:</p>
-          <input type="text" id="inputtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" placeholder="Ingresa aquí el mensaje a codificar"><br>
-          <p>Ingresa el número de desplazamiento:</p>
-          <input type="number" id="inputoffset" class="inputoffset" min="0"><br><br><br>
-          <input type="submit" id="bttn" class="bttn" value="Codificar"/>
+          <fieldset id="fieldset" class="fieldset" name="fieldset"><p>Mensaje para codificar:</p>
+            <input type="text" id="inputtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" placeholder="Ingresa aquí el mensaje a codificar"><br>
+            <p>Ingresa el número de desplazamiento:</p>
+            <input type="number" id="inputoffset" class="inputoffset" min="0"><br><br><br>
+            <input type="submit" id="bttn" class="bttn" value="Codificar"/>
+          </fieldset>
+          <fieldset id="fieldset2" class="fieldset" name="fieldset2"><p>Mensaje para decodificar:</p>
+            <input type="text" id="codedtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" placeholder="Ingresa aquí el mensaje a decodificar"><br>
+            <p>Ingresa el número de desplazamiento:</p>
+            <input type="number" id="codedoffset" class="inputoffset" min="0"><br><br><br>
+            <input type="submit" id="bttn2" class="bttn" value="Decodificar"/></fieldset>
         </form>
       </main>
     </div>
