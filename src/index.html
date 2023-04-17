@@ -15,9 +15,9 @@
         <form id="codeform" autocomplete="off">
           <fieldset id="fieldset" class="fieldset" name="fieldset">
             <p>Tu mensaje:<br>(No es posible utilizar la letra "ñ", ni letras con tilde o números)</p>
-            <input type="text" id="inputtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" placeholder="Ingresa aquí el mensaje"><br>
+            <input type="text" id="inputtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" required pattern="[A-Za-z]{1,}" oninput="validity.valid||(value='');" placeholder="Ingresa aquí el mensaje"><br>
             <p>Ingresa el número de desplazamiento:</p>
-            <input type="number" id="inputoffset" class="inputoffset" min="0"><br><br>
+            <input type="number" id="inputoffset" class="inputoffset" min="0" oninput="validity.valid||(value='');"><br><br>
             <input type="submit" id="bttn" class="bttn" formtarget="_self" value="Codificar"/>
             <input type="submit" id="bttn2" class="bttn" value="Decodificar"/>
             <p>Resultado:</p>
