@@ -9,24 +9,23 @@
   <body>
     <div id="root" class="center">
       <main>
-        <img src="img/logo.jpg" alt="Logo Top Secret" width="300" height="300">
+        <img src="img/top-secret-logo.png" alt="Logo Top Secret" width="35%" height="35%">
         <h1>Bienvenid@ a Top Secret</h1>
-        <h2>Aquí podrás codificar o decodificar un mensaje para tener una conversación secreta con tus amig@s.</h2>
+        <h2 id="welcome">Aquí podrás codificar o decodificar un mensaje para tener una conversación secreta con tus amig@s.</h2>
         <form id="codeform" autocomplete="off">
-          <fieldset id="fieldset" class="fieldset" name="fieldset"><p>Mensaje para codificar:</p>
-            <input type="text" id="inputtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" placeholder="Ingresa aquí el mensaje a codificar"><br>
+          <fieldset id="fieldset" class="fieldset" name="fieldset">
+            <p>Tu mensaje:<br>(No es posible utilizar la letra "ñ", ni letras con tilde o números)</p>
+            <input type="text" id="inputtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" placeholder="Ingresa aquí el mensaje"><br>
             <p>Ingresa el número de desplazamiento:</p>
-            <input type="number" id="inputoffset" class="inputoffset" min="0"><br><br><br>
-            <input type="submit" id="bttn" class="bttn" value="Codificar"/>
+            <input type="number" id="inputoffset" class="inputoffset" min="0"><br><br>
+            <input type="submit" id="bttn" class="bttn" formtarget="_self" value="Codificar"/>
+            <input type="submit" id="bttn2" class="bttn" value="Decodificar"/>
+            <p>Resultado:</p>
+            <h2 id="result"><br></h2><br>
           </fieldset>
-          <fieldset id="fieldset2" class="fieldset" name="fieldset2"><p>Mensaje para decodificar:</p>
-            <input type="text" id="codedtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" placeholder="Ingresa aquí el mensaje a decodificar"><br>
-            <p>Ingresa el número de desplazamiento:</p>
-            <input type="number" id="codedoffset" class="inputoffset" min="0"><br><br><br>
-            <input type="submit" id="bttn2" class="bttn" value="Decodificar"/></fieldset>
         </form>
       </main>
     </div>
-    <script src="index.js" type="module"></script>
+    <script src="index.js" type="module"></script> 
   </body>
 </html>

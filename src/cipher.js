@@ -15,9 +15,6 @@ const cipher = {
         const min_char = ((char_ascii - 32 + offset - 65) % 26) + 65;
         coded_msg = coded_msg + String.fromCharCode(min_char);
       }
-      if (char === "?") {
-        coded_msg = coded_msg + "?";
-      }
       if (char === "¿") {
         coded_msg = coded_msg + "¿";
       }
@@ -34,7 +31,7 @@ const cipher = {
     for (let i = 0; i < txt.length; i++) {
       const char = txt[i];
       const char_ascii = char.charCodeAt(char);
-      const decoded_char = ((char_ascii - offset - 65) % 26) + 65;
+      const decoded_char = ((char_ascii - offset + 65) % 26) + 65;
       if (char_ascii >= 32 && char_ascii <= 64) {
         decoded_msg = decoded_msg + char;
       }
@@ -42,11 +39,8 @@ const cipher = {
         decoded_msg = decoded_msg + String.fromCharCode(decoded_char);
       }
       if (char_ascii >= 97 && char_ascii <= 122) {
-        const min_char = ((char_ascii - 32 - offset - 65) % 26) + 65;
+        const min_char = ((char_ascii - 32 - offset + 65) % 26) + 65;
         decoded_msg = decoded_msg + String.fromCharCode(min_char);
-      }
-      if (char === "?") {
-        decoded_msg = decoded_msg + "?";
       }
       if (char === "¿") {
         decoded_msg = decoded_msg + "¿";

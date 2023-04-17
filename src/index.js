@@ -5,13 +5,15 @@ button.addEventListener("click", (event) => {
   const ofst = document.getElementById("inputoffset").value;
   const encoded = cipher.encode(Number(ofst), msg);
   event.preventDefault();
-  console.log(encoded);
+  const result = document.querySelector("#result");
+  result.innerHTML = encoded; 
 });
 const button2 = document.getElementById("bttn2");
 button2.addEventListener("click", (event) => {
-  const msg2 = document.getElementById("codedtext").value;
-  const ofst2 = document.getElementById("codedoffset").value;
+  const msg2 = document.getElementById("inputtext").value;
+  const ofst2 = document.getElementById("inputoffset").value;
   const decoded = cipher.decode(Number(ofst2), msg2);
   event.preventDefault();
-  console.log(decoded);
+  const result = document.querySelector("#result");
+  result.innerHTML = decoded;
 });
