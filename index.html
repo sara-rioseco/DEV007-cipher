@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Top Secret</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat|DynaPuff">
+  </head>
+  <body>
+    <div id="root" class="center">
+      <main>
+        <img src="img/top-secret-logo.png" alt="Logo Top Secret" width="35%" height="35%">
+        <h1>Bienvenid@ a Top Secret</h1>
+        <h2 id="welcome">Aquí podrás codificar o decodificar un mensaje para tener una conversación secreta con tus amig@s.</h2>
+        <form id="codeform" autocomplete="off">
+          <fieldset id="fieldset" class="fieldset" name="fieldset">
+            <p>Tu mensaje:<br>(No es posible utilizar la letra "ñ", ni letras con tilde o números)</p>
+            <input type="text" id="inputtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" required pattern="[A-Za-z]{1,}" oninput="validity.valid||(value='');" placeholder="Ingresa aquí el mensaje"><br>
+            <p>Ingresa el número de desplazamiento:</p>
+            <input type="number" id="inputoffset" class="inputoffset" min="0" oninput="validity.valid||(value='');"><br><br>
+            <input type="submit" id="bttn" class="bttn" formtarget="_self" value="Codificar"/>
+            <input type="submit" id="bttn2" class="bttn" value="Decodificar"/>
+            <p>Resultado:</p>
+            <h2 id="result"><br></h2><br>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+    <script src="index.js" type="module"></script> 
+  </body>
+</html>
