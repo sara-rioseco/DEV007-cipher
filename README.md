@@ -6,7 +6,6 @@
 * [2. Usuarios](#2-usuarios)
 * [3. Interfaz](#3-interfaz)
 * [4. Test](#4-test)
-* [5. Hitos Personales](#5-hitos-personales)
 
 ***
 
@@ -31,7 +30,7 @@ El resultado se mostrará abajo de los botones de Codificar y Decodificar.
 
 Prototipo del diseño original:
 
-
+![Prototipo Proyecto](https://github.com/sara-rioseco/DEV007-cipher/blob/baa364241a961066a4d3050a58952b5fe24b3aed/src/img/Prototipo1.png?raw=true)
 
 ## 2. Usuarios
 
@@ -43,15 +42,10 @@ La interfaz es simple y en tonos claros, el fondo intenta asemejar una hoja de p
 
 Diseño final:
 
-
+![Diseño Final](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/img/Proyecto1.png?raw=true)
 
 ## 4. Test
 
 Se ejecutaron pruebas unitarias con los siguientes resultados:
 
-
-
-## 5. Hitos personales
-
-
-
+![Tests](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/img/Tests.JPG?raw=true)
