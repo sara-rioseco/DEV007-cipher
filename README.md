@@ -16,7 +16,7 @@ Top secret es una aplicación web para codificar y decodificar mensajes. Para es
 
 Lo que hace la codificación y decodificación es utilizar el Cifrado Cesar, uno de los métodos más sencillos para cifrar un mensaje. Consiste en sustituir cada letra de un texto por una que se encuentra un número definido de posiciones más adelante en el mismo alfabeto. Dentro de un mismo mensaje se utiliza el mismo número de desplazamiento. La decodificación funciona de la misma forma, pero la letra se sustituye por la que esté en el mismo número de desplazamiento hacia atrás en el alfabeto.
 
-[caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
+![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
 
 Por ejemplo, si usamos un _offset_ de 3 posiciones:
 
