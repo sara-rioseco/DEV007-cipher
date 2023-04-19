@@ -6,7 +6,7 @@ button.addEventListener("click", (event) => {
   const encoded = cipher.encode(Number(ofst), msg);
   event.preventDefault();
   const result = document.querySelector("#result");
-  result.innerHTML = encoded; 
+  result.textContent = encoded; 
 });
 const button2 = document.getElementById("bttn2");
 button2.addEventListener("click", (event) => {
@@ -15,5 +15,5 @@ button2.addEventListener("click", (event) => {
   const decoded = cipher.decode(Number(ofst2), msg2);
   event.preventDefault();
   const result = document.querySelector("#result");
-  result.innerHTML = decoded;
+  result.textContent = decoded;
 });
