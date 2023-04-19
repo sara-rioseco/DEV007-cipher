@@ -1,47 +1,34 @@
-# Cifrado César
+# Top Secret
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Consideraciones generales](#3-consideraciones-generales)
-* [4. Hito: Criterios de aceptación mínimos del proyecto](#4-hito-criterios-de-aceptación-mínimos-del-proyecto)
-* [5. Hito Opcional: Agrega soporte para minúsculas y otros caracteres](#5-hito-opcional-agrega-soporte-para-minúsculas-y-otros-caracteres)
-* [6. Consideraciones técnicas](#6-consideraciones-técnicas)
-* [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Para considerar Project Feedback](#9-para-considerar-project-feedback)
+* [1. Definición](#1-definición)
+* [2. Usuarios](#2-usuarios)
+* [3. Interfaz](#3-interfaz)
+* [4. Test](#4-test)
+* [5. Hitos Personales](#5-hitos-personales)
 
 ***
 
-## 1. Preámbulo
+## 1. Definición
 
-Cifrar significa ocultar el contenido de un mensaje a simple vista, de manera
-que sólo las partes autorizadas pueden descifrar un texto cifrado.
-El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher)
-es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio
-César lo usaba para enviar órdenes secretas a sus generales en los campos de
-batalla.
+Top secret es una aplicación web para codificar y decodificar mensajes. Para esto, recibe dos inputs de parte del usuario, uno como texto, en formato de string y otro que es un número entero positivo que llamaremos _offset_. Luego el usuario tendrá dos opciones que se muestran en dos botones, uno para Codificar y otro para Decodificar. 
 
-El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es
-un tipo de cifrado por sustitución, es decir que cada letra del texto original
-es reemplazada por otra que se encuentra un número fijo de posiciones
-(desplazamiento) más adelante en el mismo alfabeto.
+Lo que hace la codificación y decodificación es utilizar el Cifrado Cesar, uno de los métodos más sencillos para cifrar un mensaje. Consiste en sustituir cada letra de un texto por una que se encuentra un número definido de posiciones más adelante en el mismo alfabeto. Dentro de un mismo mensaje se utiliza el mismo número de desplazamiento. La decodificación funciona de la misma forma, pero la letra se sustituye por la que esté en el mismo número de desplazamiento hacia atrás en el alfabeto.
 
-![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
+[caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
 
-Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
+Por ejemplo, si usamos un _offset_ de 3 posiciones:
 
 * La letra A se cifra como D.
 * La palabra CASA se cifra como FDVD.
 * Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 * Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 
-En la actualidad, todos los cifrados de sustitución simple se descifran con
-mucha facilidad y, aunque en la práctica no ofrecen mucha seguridad en la
-comunicación por sí mismos; el cifrado César sí puede formar parte de sistemas
-más complejos de codificación, como el cifrado Vigenère, e incluso tiene
-aplicación en el sistema ROT13.
+Para implementar este cifrado, se utilizó un algoritmo que utiliza el código ASCII decimal de cada letra para calcular la posición adecuada según el _offset_ ingresado por el usuario. También se restringió el input del texto para que solo acepte letras mayúsculas, minúsculas y espacios, mientras que el input del _offset_ solo aceptará números enteros positivos. 
+
+El resultado se mostrará abajo de los botones de Codificar y Decodificar.
+
 
 ## 2. Resumen del proyecto
 
