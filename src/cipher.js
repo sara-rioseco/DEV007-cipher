@@ -17,7 +17,7 @@ const cipher = {
           const min_char = ((char_ascii - 32 + offset - 65) % 26) + 65;
           coded_msg = coded_msg + String.fromCharCode(min_char);
         }
-        if (char_ascii === 32) {
+        if (char_ascii >= 32 && char_ascii <= 64) {
           coded_msg = coded_msg + char;
         }
       }
@@ -41,7 +41,7 @@ const cipher = {
           const min_char = ((char_ascii - 32 - offset + 65) % 26) + 65;
           decoded_msg = decoded_msg + String.fromCharCode(min_char);
         }
-        if (char_ascii === 32) {
+        if (char_ascii >= 32 && char_ascii <= 64) {
           decoded_msg = decoded_msg + char;
         }
       }
