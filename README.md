@@ -1,51 +1,75 @@
 # Top Secret
 
-## Índice
+## Contents
 
-* [1. Definición](#1-definición)
-* [2. Usuarios](#2-usuarios)
-* [3. Interfaz](#3-interfaz)
-* [4. Test](#4-test)
+* [1. Project Overview](#1-project-overview)
+* [2. Encoding and Decoding](#2-encoding-and-decoding)
+* [3. Users](#2-users)
+* [4. UI](#3-ui)
+* [5. Unit tests](#4-unit-tests)
 
 ***
 
-## 1. Definición
+## 1. Project Overview
 
-Top secret es una aplicación web para codificar y decodificar mensajes. Para esto, recibe dos inputs de parte del usuario, uno como texto, en formato de string y otro que es un número entero positivo que llamaremos _offset_. Luego el usuario tendrá dos opciones que se muestran en dos botones, uno para Codificar y otro para Decodificar. 
+Top secret is a web application designed to encode and decode messages.
+To accomplish this, it receives two inputs from the user: one as text in
+string format and another as a positive integer called the _offset_.
+The user is presented with two options through buttons:
+"Codificar" (Encode) and "Decodificar" (Decode).
 
-Lo que hace la codificación y decodificación es utilizar el Cifrado Cesar, uno de los métodos más sencillos para cifrar un mensaje. Consiste en sustituir cada letra de un texto por una que se encuentra un número definido de posiciones más adelante en el mismo alfabeto. Dentro de un mismo mensaje se utiliza el mismo número de desplazamiento. La decodificación funciona de la misma forma, pero la letra se sustituye por la que esté en el mismo número de desplazamiento hacia atrás en el alfabeto.
+## 2. Encoding and Decoding
 
-Por ejemplo, si usamos un _offset_ de 3 posiciones:
+The encoding and decoding processes involve the use of the Caesar Cipher,
+one of the simplest methods for encrypting a message. It entails replacing
+each letter in a text with another letter located a defined number of
+positions forward in the same alphabet. The same displacement number is
+used within a single message. Decoding operates similarly, but it replaces
+a letter with one found the same number of positions backward in
+the alphabet.
 
-* La letra A se cifra como D.
-* La palabra CASA se cifra como FDVD.
-* Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-* Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
+For instance, if we go for an _offset_ of 3 positions:
 
-![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
+* The letter A is encoded as D.
+* The word "HOUSE" is encoded as "KRXVH".
+* Regular alphabet: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+* Encoded alphabet: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 
-Para implementar este cifrado, se utilizó un algoritmo que utiliza el código ASCII decimal de cada letra para calcular la posición adecuada según el _offset_ ingresado por el usuario. También se restringió el input del texto para que solo acepte letras mayúsculas, minúsculas y espacios, mientras que el input del _offset_ solo aceptará números enteros positivos. 
+![Caeser Cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
 
-El resultado se mostrará abajo de los botones de Codificar y Decodificar.
+To implement this encryption, an algorithm was used. This algorithm utilizes
+the decimal ASCII code of each letter to calculate the appropriate position
+based on the user-entered offset. Text input is restricted to accept only
+uppercase letters, lowercase letters, and spaces, while the offset input
+only accepts positive integers.
 
-Prototipo del diseño original:
+The result is displayed below the "Codificar" and "Decodificar" buttons.
 
-![Prototipo Proyecto](https://github.com/sara-rioseco/DEV007-cipher/blob/baa364241a961066a4d3050a58952b5fe24b3aed/src/img/Prototipo1.png?raw=true)
+Original design prototype:
 
-## 2. Usuarios
+![Project Prototype](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/Prototipo1.png?raw=true)
 
-Los principales usuarios del producto son jóvenes con acceso a internet/smartphone que quieran compartir información con amig@s de manera privada. Se plantea esto a modo de juego para tener una conversación secreta con otros usuarios, por lo que más que resolver un problema se trata de una orma de entretenimiento y distensión.
+## 2. Users
 
-## 3. Interfaz
+The primary users of this product are young individuals with internet/smartphone
+access who wish to share information privately with friends. This is presented
+as a sort of game, in which you can have a secret conversation with other users,
+so it's all about entertainment and and having a fun time.
 
-La interfaz es simple y en tonos claros, el fondo intenta asemejar una hoja de papel y el logo es una especie de timbre, que tiene apariencia de ser parte de un documento confidencial, haciendo énfasis en lo secreto del mensaje que se codificará. Por lo mismo, se utilizó una fuente de tipo handwriting, simulando un mensaje que está siendo escrito por el usuario sobre el papel.
+## 3. UI
 
-Diseño final:
+The interface is simple and features light tones. The background aims to
+resemble a sheet of paper, and the logo resembles a stamp, giving the
+appearance of a confidential document, emphasizing the secrecy of the
+message to be encoded. Also, a handwriting-style font was used, simulating
+a message being written on a sheet of paper.
 
-![Diseño Final](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/img/Proyecto1.png?raw=true)
+Final Design
 
-## 4. Test
+![Final Design](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/Proyecto1.png?raw=true)
 
-Se ejecutaron pruebas unitarias con los siguientes resultados:
+## 4. Unit Tests
 
-![Tests](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/img/Tests.JPG?raw=true)
+Unit tests were executed with the following results:
+
+![Unit Tests](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/tests.png?raw=true)
