@@ -4,33 +4,45 @@
     <meta charset="utf-8">
     <title>Top Secret</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat|DynaPuff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='Bebas Neue'|Poppins">
   </head>
   <body>
     <div id="root" class="root">
-      <main>
-        <img src="assets/top-secret-logo.png" alt="Top Secret Logo">
-        <h1>Welcome to Top Secret</h1>
-        <h2 id="welcome">Here you can encode or decode a message to have a secret conversation with your friends.</h2>
-        <form id="codeform" class="codeform" autocomplete="off">
-          <fieldset id="fieldset" class="fieldset" name="fieldset">
-            <p>Write your message:</p>
-            <input type="text" id="inputtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" oninput="validity.valid||(value='');" placeholder="Your message goes here">
-            <span id="erroridinput"></span>
-            <p>Insert the offset number:</p>
-            <input type="number" id="inputoffset" class="inputoffset" min="0" oninput="validity.valid||(value='');">
-            <span id="erroridoffset"></span>
-            <div class="button-div">
-              <input type="submit" id="bttn" class="bttn" formtarget="_self" value="Encode"/>
-              <input type="submit" id="bttn2" class="bttn" value="Decode"/>
-            </div>
-            <p>Result:</p>
-            <div class="result-div">
-              <h2 id="result"></h2>
-              <input type="submit" id="bttn3" class="bttn" value="Copy to clipboard"/>
-            </div>
-          </fieldset>
-        </form>
+      <main is="main" class="main">
+        <header class="header">
+          <img src="assets/top-secret-logo.png" alt="Top Secret Logo">
+        </header>
+        <div class="main-content">
+          <section id="first-section" class="section">
+            <h1 class="title">Welcome to Top Secret</h1>
+            <h2 class="subtitle">Here you can encode or decode a message to have a secret conversation with your friends.</h2>
+            <p class="text"></p>
+          </section>
+          <section id="second-section" class="section">
+            <form id="codeform" class="codeform" autocomplete="off">
+              <fieldset id="fieldset" class="fieldset" name="fieldset">
+                <p>Write your message:</p>
+                <input type="text" id="input-text" class="input-text" name="input-text" size="30" spellcheck="false" minlength="1" oninput="validity.valid||(value='');" placeholder="Write here">
+                <span id="error-text-input"></span>
+                <p>Insert the offset number:</p>
+                <input type="number" id="input-offset" class="input-offset" min="0" oninput="validity.valid||(value='');">
+                <span id="error-offset-input"></span>
+                <div class="button-div">
+                  <input type="submit" id="encode-button" class="button" formtarget="_self" value="Encode"/>
+                  <input type="submit" id="decode-button" class="button" value="Decode"/>
+                </div>
+                <p>Result:</p>
+                <div class="result-div">
+                  <h2 id="result"></h2>
+                  <input type="submit" id="copy-button" class="button" value="Copy to clipboard"/>
+                </div>
+              </fieldset>
+            </form>
+          </section>
+        </div>
+        <footer class="footer">
+          <p class="text">Created by Sara Rioseco© 2023</p>
+        </footer>
       </main>
     </div>
     <script src="index.js" type="module"></script>
