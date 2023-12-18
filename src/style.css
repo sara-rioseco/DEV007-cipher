@@ -73,7 +73,7 @@ p {
 
 .codeform {
   margin: 0;
-} 
+}
 
 .fieldset {
   background-color: rgba(156, 116, 70, 0.1);
@@ -90,11 +90,9 @@ p {
 
 .inputtext {
   height: 100%;
-/*   width: 20em; */
-/*   max-width:740px; */
   opacity: 1;
   padding: 0.8em;
-  margin: 1em 2em;
+  margin: 1em 2em 0 2em;
   border: none;
   border-radius: 4px;
   font-size: 16px;
@@ -104,13 +102,19 @@ p {
   text-align: center;
   box-sizing: border-box;
 }
+#erroridinput, #erroridoffset {
+  color: red;
+  margin: 5px 0 0 0;
+  min-height: 20px;
+}
+
 .inputoffset {
   height: 100%;
   width: 20%;
 /*   max-width: 20%; */
   opacity: 1;
   padding: 0.8em;
-  margin: 1em 2em;
+  margin: 1em 2em 0 2em;
   border: none;
   border-radius: 4px;
   font-size: 16px;
@@ -120,11 +124,18 @@ p {
   text-align: center;
   box-sizing: border-box;
 }
-.buttondiv {
+.button-div {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
+  margin: 0.5em;
+}
+.result-div {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
   margin: 0.5em;
 }
 .bttn {

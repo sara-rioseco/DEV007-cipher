@@ -1,4 +1,7 @@
 const cipher = {
+  validateInput: (input) => /[^a-zA-Z\s]+/.test(input),
+  // validateOffset: (offset) => /^(0|[1-9][0-9]*)$/.test(offset),
+  copyResult: (str) => navigator.clipboard.writeText(str),
   encode: function (offset, txt) {
     let coded_msg = "";
     if (typeof offset !== "number" || typeof txt !== "string") {
