@@ -14,20 +14,25 @@
         <h2 id="welcome">Here you can encode or decode a message to have a secret conversation with your friends.</h2>
         <form id="codeform" class="codeform" autocomplete="off">
           <fieldset id="fieldset" class="fieldset" name="fieldset">
-            <p>Write your message:<br>(Only letters and spaces are allowed)</p>
-            <input type="text" id="inputtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" required pattern="[A-Za-z ]{1,}" oninput="validity.valid||(value='');" placeholder="Your message goes here">
+            <p>Write your message:</p>
+            <input type="text" id="inputtext" class="inputtext" name="inputtext" size="30" spellcheck="false" minlength="1" oninput="validity.valid||(value='');" placeholder="Your message goes here">
+            <span id="erroridinput"></span>
             <p>Insert the offset number:</p>
             <input type="number" id="inputoffset" class="inputoffset" min="0" oninput="validity.valid||(value='');">
-            <div class="buttondiv">
+            <span id="erroridoffset"></span>
+            <div class="button-div">
               <input type="submit" id="bttn" class="bttn" formtarget="_self" value="Encode"/>
               <input type="submit" id="bttn2" class="bttn" value="Decode"/>
             </div>
             <p>Result:</p>
-            <h2 id="result"></h2>
+            <div class="result-div">
+              <h2 id="result"></h2>
+              <input type="submit" id="bttn3" class="bttn" value="Copy to clipboard"/>
+            </div>
           </fieldset>
         </form>
       </main>
     </div>
-    <script src="index.js" type="module"></script> 
+    <script src="index.js" type="module"></script>
   </body>
 </html>
