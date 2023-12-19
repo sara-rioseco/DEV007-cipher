@@ -1,60 +1,80 @@
 import cipher from "./cipher.js";
-const button = document.getElementById("bttn");
-const button2 = document.getElementById("bttn2");
-const inputText = document.getElementById('inputtext');
-const errorInputText = document.getElementById('erroridinput');
-const inputOffset = document.getElementById('inputoffset');
-const errorInputOffset = document.getElementById('erroridoffset');
-const copyBttn = document.getElementById('bttn3');
+const encodeButton = document.getElementById("encode-button");
+const decodeButton = document.getElementById("decode-button");
+const inputText = document.getElementById('input-text');
+const errorTextInput = document.getElementById('error-text-input');
+const inputOffset = document.getElementById('input-offset');
+const errorOffsetInput = document.getElementById('error-offset-input');
+const copyButton = document.getElementById('copy-button');
+const copyTextMessage = document.getElementById('copy-text-message');
+const clearButton = document.getElementById('clear-button');
 
 inputText.addEventListener('input', (e) => {
   const value = e.target.value;
   if (cipher.validateInput(value)) {
     inputText.value = value.slice(0, value.length - 1);
-    errorInputText.textContent = 'Only letters and spaces are allowed';
+    errorTextInput.textContent = 'Only letters and spaces are allowed';
   } else {
-    errorInputText.textContent = '';
+    errorTextInput.textContent = '';
   }
 });
+
 inputText.addEventListener('blur', (e) => {
   const value = e.target.value;
   if (value.length === 0 ) {
-    errorInputText.textContent = 'Enter a message';
+    errorTextInput.textContent = 'Enter a message';
   } else {
-    errorInputText.textContent = '';
+    errorTextInput.textContent = '';
+  }
+});
+
+inputOffset.addEventListener('input', (e) => {
+  const value = e.target.value;
+  if (!cipher.validateOffset(Number(value))) {
+    inputOffset.value = '130';
+    errorOffsetInput.textContent = 'Maximum number 130';
+  } else {
+    errorOffsetInput.textContent = '';
   }
 });
 
 inputOffset.addEventListener('blur', (e) => {
   const value = e.target.value;
   if (value.length === 0 ) {
-    errorInputOffset.textContent = 'Enter a number';
+    errorOffsetInput.textContent = 'Enter a number';
   } else {
-    errorInputOffset.textContent = '';
+    errorOffsetInput.textContent = '';
   }
 });
 
-
-button.addEventListener("click", (event) => {
-  const msg = document.getElementById("inputtext").value;
-  const ofst = document.getElementById("inputoffset").value;
+encodeButton.addEventListener("click", (event) => {
+  const msg = document.getElementById("input-text").value;
+  const ofst = document.getElementById("input-offset").value;
   const encoded = cipher.encode(Number(ofst), msg);
   event.preventDefault();
   const result = document.querySelector("#result");
   result.textContent = encoded;
 });
 
-button2.addEventListener("click", (event) => {
-  const msg2 = document.getElementById("inputtext").value;
-  const ofst2 = document.getElementById("inputoffset").value;
+decodeButton.addEventListener("click", (event) => {
+  const msg2 = document.getElementById("input-text").value;
+  const ofst2 = document.getElementById("input-offset").value;
   const decoded = cipher.decode(Number(ofst2), msg2);
   event.preventDefault();
   const result = document.querySelector("#result");
   result.textContent = decoded;
 });
 
-copyBttn.addEventListener("click", (e) => {
+copyButton.addEventListener("click", (e) => {
   e.preventDefault();
   const result = document.querySelector("#result").textContent;
-  cipher.copyResult(result)
+  cipher.copyResult(result);
+  copyTextMessage.textContent = 'Your message has been copied!';
+  setTimeout(()=> copyTextMessage.textContent = '', 2000);
+})
+
+clearButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const result = document.querySelector("#result");
+  result.textContent = '';
 })
