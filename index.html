@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>Top Secret</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family='Bebas Neue'|Poppins">
   </head>
   <body>
@@ -19,13 +19,20 @@
             <h2 class="subtitle">Here you can encode or decode a message to have a secret conversation with your friends.</h2>
             <p class="text" id="first-section-p">How does it work?</p>
           </section>
+          <dialog class="modal" id="modal">
+            <p>This site uses the <strong>Caesar Cipher</strong> technique to encode your message.
+              This method replaces each letter with a different one a fixed number of places down the alphabet.</p>
+            <p>You can enter the <strong>message</strong> and set an <strong>offset number</strong> to see what the coded message will be.</p>
+            <p><strong>Have fun!</strong></p>
+            <input type="submit" id="ok-button" class="button" value="Got it"/>
+          </dialog>
           <section id="second-section" class="section">
             <form id="codeform" class="codeform" autocomplete="off">
               <fieldset id="fieldset" class="fieldset" name="fieldset">
                 <div class="inputs-div">
                   <div class="text-input-div">
                     <p class="form-text">Your message:</p>
-                    <input type="text" id="input-text" class="input-text" name="input-text" size="30" spellcheck="false" minlength="1" oninput="validity.valid||(value='');" placeholder="Write here">
+                    <input type="text" id="input-text" size="15" class="input-text" name="input-text" spellcheck="false" minlength="1" oninput="validity.valid||(value='');" placeholder="Write here">
                     <span id="error-text-input"></span>
                   </div>
                   <div class="offset-input-div">

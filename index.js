@@ -8,10 +8,23 @@ const errorOffsetInput = document.getElementById('error-offset-input');
 const copyButton = document.getElementById('copy-button');
 const copyTextMessage = document.getElementById('copy-text-message');
 const clearButton = document.getElementById('clear-button');
+const modalLink = document.getElementById('first-section-p');
+const modal = document.querySelector('dialog');
+const okButton = document.getElementById('ok-button');
+
+modalLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  modal.showModal();
+})
+
+okButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  modal.close();
+})
 
 inputText.addEventListener('input', (e) => {
   const value = e.target.value;
-  if (cipher.validateInput(value)) {
+  if (!cipher.validateInput(value)) {
     inputText.value = value.slice(0, value.length - 1);
     errorTextInput.textContent = 'Only letters and spaces are allowed';
   } else {
@@ -70,7 +83,7 @@ copyButton.addEventListener("click", (e) => {
   const result = document.querySelector("#result").textContent;
   cipher.copyResult(result);
   copyTextMessage.textContent = 'Your message has been copied!';
-  setTimeout(()=> copyTextMessage.textContent = '', 2000);
+  setTimeout(()=> copyTextMessage.textContent = '', 1500);
 })
 
 clearButton.addEventListener("click", (e) => {
