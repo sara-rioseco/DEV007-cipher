@@ -8,6 +8,19 @@ const errorOffsetInput = document.getElementById('error-offset-input');
 const copyButton = document.getElementById('copy-button');
 const copyTextMessage = document.getElementById('copy-text-message');
 const clearButton = document.getElementById('clear-button');
+const modalLink = document.getElementById('first-section-p');
+const modal = document.querySelector('dialog');
+const okButton = document.getElementById('ok-button');
+
+modalLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  modal.showModal();
+})
+
+okButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  modal.close();
+})
 
 inputText.addEventListener('input', (e) => {
   const value = e.target.value;
