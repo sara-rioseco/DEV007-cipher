@@ -361,14 +361,22 @@
     color: #858585;
     box-sizing: border-box;
   }
+  div.offset-input-div {
+    width: 104px;
+  }
 
   #input-text, #input-offset {
     height: 36px;
     border-radius: 10px;
     border: 1px solid #858585;
-    padding: 0 10px;
+    padding: 0 0 0 10px;
     font-family: Poppins;
   }
+
+  #input-offset {
+    width: 104px;
+  }
+
   .form-text {
     display: flex;
     font-size: 14px;
