@@ -16,25 +16,37 @@
           <section id="first-section" class="section">
             <h1 class="title">Welcome to Top Secret</h1>
             <h2 class="subtitle">Here you can encode or decode a message to have a secret conversation with your friends.</h2>
-            <p class="text"></p>
+            <p class="text" id="first-section-p">How does it work?</p>
           </section>
           <section id="second-section" class="section">
             <form id="codeform" class="codeform" autocomplete="off">
               <fieldset id="fieldset" class="fieldset" name="fieldset">
-                <p>Write your message:</p>
-                <input type="text" id="input-text" class="input-text" name="input-text" size="30" spellcheck="false" minlength="1" oninput="validity.valid||(value='');" placeholder="Write here">
-                <span id="error-text-input"></span>
-                <p>Insert the offset number:</p>
-                <input type="number" id="input-offset" class="input-offset" min="0" oninput="validity.valid||(value='');">
-                <span id="error-offset-input"></span>
+                <div class="inputs-div">
+                  <div class="text-input-div">
+                    <p class="form-text">Your message:</p>
+                    <input type="text" id="input-text" class="input-text" name="input-text" size="30" spellcheck="false" minlength="1" oninput="validity.valid||(value='');" placeholder="Write here">
+                    <span id="error-text-input"></span>
+                  </div>
+                  <div class="offset-input-div">
+                    <p class="form-text">Offset number:</p>
+                    <input type="number" id="input-offset" class="input-offset" min="0" oninput="validity.valid||(value='');">
+                    <span id="error-offset-input"></span>
+                  </div>
+                </div>
                 <div class="button-div">
                   <input type="submit" id="encode-button" class="button" formtarget="_self" value="Encode"/>
                   <input type="submit" id="decode-button" class="button" value="Decode"/>
                 </div>
-                <p>Result:</p>
                 <div class="result-div">
-                  <h2 id="result"></h2>
-                  <input type="submit" id="copy-button" class="button" value="Copy to clipboard"/>
+                  <div class="result-text-div">
+                    <p class="form-text">Result:</p>
+                    <h2 id="result"></h2>
+                    <span id="copy-text-message"></span>
+                  </div>
+                  <div class="result-button-div">
+                    <input type="submit" id="copy-button" class="button" value="Copy"/>
+                    <input type="submit" id="clear-button" class="button" value="Clear"/>
+                  </div>
                 </div>
               </fieldset>
             </form>

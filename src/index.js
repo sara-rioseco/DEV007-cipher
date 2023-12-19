@@ -6,6 +6,8 @@ const errorTextInput = document.getElementById('error-text-input');
 const inputOffset = document.getElementById('input-offset');
 const errorOffsetInput = document.getElementById('error-offset-input');
 const copyButton = document.getElementById('copy-button');
+const copyTextMessage = document.getElementById('copy-text-message');
+const clearButton = document.getElementById('clear-button');
 
 inputText.addEventListener('input', (e) => {
   const value = e.target.value;
@@ -16,12 +18,23 @@ inputText.addEventListener('input', (e) => {
     errorTextInput.textContent = '';
   }
 });
+
 inputText.addEventListener('blur', (e) => {
   const value = e.target.value;
   if (value.length === 0 ) {
     errorTextInput.textContent = 'Enter a message';
   } else {
     errorTextInput.textContent = '';
+  }
+});
+
+inputOffset.addEventListener('input', (e) => {
+  const value = e.target.value;
+  if (!cipher.validateOffset(Number(value))) {
+    inputOffset.value = '130';
+    errorOffsetInput.textContent = 'Maximum number 130';
+  } else {
+    errorOffsetInput.textContent = '';
   }
 });
 
@@ -55,5 +68,13 @@ decodeButton.addEventListener("click", (event) => {
 copyButton.addEventListener("click", (e) => {
   e.preventDefault();
   const result = document.querySelector("#result").textContent;
-  cipher.copyResult(result)
+  cipher.copyResult(result);
+  copyTextMessage.textContent = 'Your message has been copied!';
+  setTimeout(()=> copyTextMessage.textContent = '', 2000);
+})
+
+clearButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const result = document.querySelector("#result");
+  result.textContent = '';
 })
