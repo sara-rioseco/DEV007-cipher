@@ -81,7 +81,7 @@ Final design desktop version:
 
 Final design mobile version:
 
-![Final Design Mobile](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/final-design-mobile.png?raw=true)
+![Final Design Mobile](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/final-design-mobile.jpg?raw=true)
 
 ## 4. Unit Tests
 
