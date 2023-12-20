@@ -75,9 +75,13 @@ First version design:
 
 ![First Version Design](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/first-version.png?raw=true)
 
-Final design:
+Final design desktop version:
 
-![Final Design](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/final-design.png?raw=true)
+![Final Design Desktop](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/final-design-desktop.png?raw=true)
+
+Final design mobile version:
+
+![Final Design Mobile](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/final-design-mobile.png?raw=true)
 
 ## 4. Unit Tests
 
