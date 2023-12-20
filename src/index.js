@@ -45,7 +45,7 @@ inputOffset.addEventListener('input', (e) => {
   const value = e.target.value;
   if (!cipher.validateOffset(Number(value))) {
     inputOffset.value = '130';
-    errorOffsetInput.textContent = 'Maximum number 130';
+    errorOffsetInput.textContent = 'Max number 130';
   } else {
     errorOffsetInput.textContent = '';
   }
