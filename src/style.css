@@ -157,6 +157,9 @@
     height: 12px;
     font-size: 10px;
   }
+  #error-text-input {
+    width:180px;
+  }
   .button {
     height: 30px;
     width: 100px;
@@ -373,6 +376,10 @@
     font-family: Poppins;
   }
 
+  #input-text {
+    width: 220px;
+  }
+
   #input-offset {
     width: 104px;
   }
@@ -389,6 +396,12 @@
     height: 20px;
     font-size: 12px;
     margin: 0 10px;
+  }
+  #error-text-input {
+    width:220px;
+  }
+  #error-offset-input {
+    width:100px;
   }
   .button {
     height: 36px;

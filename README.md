@@ -1,5 +1,7 @@
 # Top Secret
 
+![Logo](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/top-secret-logo-banner.png?raw=true)
+
 ## Contents
 
 * [1. Project Overview](#1-project-overview)
@@ -49,10 +51,6 @@ only accepts positive integers up to 130 and zero.
 
 The result is displayed within the "Result" box.
 
-Original design prototype:
-
-![Project Prototype](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/Prototipo1.png?raw=true)
-
 ## 2. Users
 
 The primary users of this product are young individuals with internet/smartphone
@@ -62,15 +60,24 @@ so it's all about entertainment and and having a fun time.
 
 ## 3. UI
 
-~~The interface is simple and features light tones. The background aims to
-resemble a sheet of paper, and the logo resembles a stamp, giving the
-appearance of a confidential document, emphasizing the secrecy of the
-message to be encoded. Also, a handwriting-style font was used, simulating
-a message being written on a sheet of paper.~~
+The interface is simple and features red, white and grey tones. The logo
+resembles a stamp, giving the appearance of a confidential document,
+emphasizing the secrecy of the message to be encoded. A funny picture and
+a modern responsive design were used.
 
-Prototype : [Prototype](https://www.figma.com/proto/ga5NaXlrktuCNs8KaJJoFh/Top-Secret?type=design&node-id=2-2&t=4lY8rNv0jwZdmlgx-1&scaling=min-zoom&page-id=0%3A1&mode=design)
+Figma Prototype: [Go to Prototype](https://www.figma.com/proto/ga5NaXlrktuCNs8KaJJoFh/Top-Secret?type=design&node-id=2-2&t=4lY8rNv0jwZdmlgx-1&scaling=min-zoom&page-id=0%3A1&mode=design)
 
-![Final Design](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/Proyecto1.png?raw=true)
+Original idea:
+
+![Project Prototype](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/first-prototype.png?raw=true)
+
+First version design:
+
+![First Version Design](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/first-version.png?raw=true)
+
+Final design:
+
+![Final Design](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/final-design.png?raw=true)
 
 ## 4. Unit Tests
 
