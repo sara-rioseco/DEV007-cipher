@@ -1,6 +1,6 @@
 # Top Secret
 
-![Logo](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/top-secret-logo-banner.png?raw=true)
+![Logo](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/img/top-secret-logo-banner.webp?raw=true)
 
 ## Contents
 
@@ -69,22 +69,22 @@ Figma Prototype: [Go to Prototype](https://www.figma.com/proto/ga5NaXlrktuCNs8Ka
 
 Original idea:
 
-![Project Prototype](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/first-prototype.png?raw=true)
+![Project Prototype](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/img/first-prototype.webp?raw=true)
 
 First version design:
 
-![First Version Design](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/first-version.png?raw=true)
+![First Version Design](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/img/first-version.webp?raw=true)
 
 Final design desktop version:
 
-![Final Design Desktop](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/final-design-desktop.png?raw=true)
+![Final Design Desktop](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/img/final-design-desktop.webp?raw=true)
 
 Final design mobile version:
 
-![Final Design Mobile](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/final-design-mobile.jpg?raw=true)
+![Final Design Mobile](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/img/final-design-mobile.webp?raw=true)
 
 ## 4. Unit Tests
 
 Unit tests were implemented with the following results:
 
-![Unit Tests](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/unit-tests.png?raw=true)
+![Unit Tests](https://github.com/sara-rioseco/DEV007-cipher/blob/main/src/assets/img/unit-tests.webp?raw=true)
