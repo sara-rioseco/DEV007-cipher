@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="Top secret is a web app to code and decode messages using the Caesar Cipher method. Developed by Sara Rioseco">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>Top Secret</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -11,7 +12,7 @@
     <div id="root" class="root">
       <main is="main" class="main">
         <header class="header">
-          <img src="assets/img/top-secret-logo.png" alt="Top Secret Logo">
+          <img src="assets/img/top-secret-logo.webp" alt="Top Secret Logo">
         </header>
         <div class="main-content">
           <section id="first-section" class="section">
@@ -32,12 +33,12 @@
                 <div class="inputs-div">
                   <div class="text-input-div">
                     <p class="form-text">Your message:</p>
-                    <input type="text" id="input-text" size="15" class="input-text" name="input-text" spellcheck="false" minlength="1" oninput="validity.valid||(value='');" placeholder="Write here">
+                    <input type="text" id="input-text" aria-label="Message" size="15" class="input-text" name="input-text" spellcheck="false" minlength="1" oninput="validity.valid||(value='');" placeholder="Write here">
                     <span id="error-text-input"></span>
                   </div>
                   <div class="offset-input-div">
                     <p class="form-text">Offset number:</p>
-                    <input type="number" id="input-offset" class="input-offset" min="0" oninput="validity.valid||(value='');">
+                    <input type="number" id="input-offset" aria-label="Offset number" class="input-offset" min="0" oninput="validity.valid||(value='');">
                     <span id="error-offset-input"></span>
                   </div>
                 </div>
